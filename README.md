@@ -64,6 +64,19 @@ POST /v1/responses
 
 ## 部署
 
+### Zeabur 一键部署
+
+点击下方按钮，一键将项目部署到 Zeabur：
+
+[![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/deploy?githubURL=https://github.com/basketikun/chatgpt2api)
+
+部署后，请在 Zeabur 控制台的环境变量（Environment Variables）中添加：
+- `CHATGPT2API_AUTH_KEY`：你的 API 认证密钥
+
+如果你需要持久化保存账号数据，请在 Zeabur 的存储（Storage）中为服务添加一个 `/app/data` 的目录挂载。
+
+### Docker 部署
+
 ```bash
 git clone git@github.com:basketikun/chatgpt2api.git
 # 首次启动会自动生成 config.json，也可以手动复制后修改
