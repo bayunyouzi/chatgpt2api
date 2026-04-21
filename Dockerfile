@@ -25,6 +25,7 @@ RUN uv sync --frozen --no-dev --no-install-project
 
 COPY main.py ./
 COPY VERSION ./
+COPY config.example.json ./
 COPY services ./services
 COPY --from=web-build /app/web/out ./web_dist
 
